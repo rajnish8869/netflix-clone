@@ -91,6 +91,7 @@ p {
 
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   flex-direction: row;
   position: fixed;
   width: -webkit-fill-available;
