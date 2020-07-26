@@ -82,12 +82,18 @@ p {
   display: -ms-flexbox;
   display: flex;
   padding: 40px;
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   left: 0;
-  width: 100vw;
+  /* width: 100vw; */
   box-sizing: border-box;
   z-index: 5;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  position: absolute;
+  width: -webkit-fill-available;
 }
 
 .Logo {
@@ -121,7 +127,7 @@ p {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 37px;
+  height: 44px;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
@@ -142,7 +148,9 @@ p {
 }
 
 .Search {
-  -webkit-box-align: center;
+  width: 50%;
+  margin: auto;
+  /* -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
@@ -161,14 +169,15 @@ p {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  pointer-events: none;
+  pointer-events: none; */
 }
 .Search input {
   font-family: "Lato", sans-serif;
   font-weight: 300;
   font-size: 14px;
   height: 37px;
-  width: 20%;
+  /* width: 20%; */
+  width: 100%;
   background: transparent;
   color: #ffffff;
   -webkit-appearance: none;
@@ -189,7 +198,7 @@ p {
 }
 
 .UserProfile {
-  margin-left: auto;
+  /* margin-left: auto; */
 }
 .UserProfile .User {
   display: -webkit-box;
