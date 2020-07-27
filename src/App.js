@@ -22,6 +22,9 @@ var App = React.createClass({
   handleChange : function(e){
       this.setState({searchTerm : e.target.value});    
   },
+  randomNumber: function() {
+    return Math.floor((Math.random() * 10) + 1);
+  },
   render: function() {
     return (
       <div>
@@ -35,11 +38,11 @@ var App = React.createClass({
         </header>
         <Hero />
         <TitleList title="Search Results" url={this.state.searchUrl} />
-        <TitleList title="Top TV picks for Rajnish" url='discover/tv?sort_by=popularity.desc&page=2' />
-        <TitleList title="Trending now" url='discover/movie?sort_by=popularity.desc&page=2' />
-        <TitleList title="Comedy magic" url='genre/35/movies?sort_by=popularity.desc&page=2' />
-        <TitleList title="Sci-Fi greats" url='genre/878/movies?sort_by=popularity.desc&page=2' />
-        <TitleList title="Most watched in Horror" url='genre/27/movies?sort_by=popularity.desc&page=2' />
+        <TitleList title="Top TV picks for Rajnish" url={`discover/tv?sort_by=popularity.desc&page=${this.randomNumber()}`} />
+        <TitleList title="Trending now" url={`discover/movie?sort_by=popularity.desc&page=${this.randomNumber()}`} />
+        <TitleList title="Comedy magic" url={`genre/35/movies?sort_by=popularity.desc&page=${this.randomNumber()}`} />
+        <TitleList title="Sci-Fi greats" url={`genre/878/movies?sort_by=popularity.desc&page=${this.randomNumber()}`} />
+        <TitleList title="Most watched in Horror" url={`genre/27/movies?sort_by=popularity.desc&page=${this.randomNumber()}`} />
       </div>
     );
   }
