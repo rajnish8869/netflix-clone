@@ -154,7 +154,7 @@ var TitleList = React.createClass({
     var titles ='';
     if(this.state.data.results) {
       titles = this.state.data.results.map(function(title, i) {
-        if(i < 5) {
+        if(i < 10) {
           var name = '';
           var backDrop = 'http://image.tmdb.org/t/p/original' + title.backdrop_path;
           if(!title.name) {
